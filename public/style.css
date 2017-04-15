@@ -1,0 +1,52 @@
+
+/*Variables should be declared within a CSS selector that defines its scope. For a global scope you can use the :root or body selector. The variable name must begin with two dashes (--) and is case sensitive, so "--main-color" and "--Main-Color" would define two different custom properties.*/
+:root {
+  --spacing: 10px;
+  --blur: 2px;
+  --base: #ffc600;
+  --radius: 10px;
+}
+
+.hl {
+  color: var(--base);
+}
+
+img#photo1 {
+  padding: var(--spacing);
+  filter: blur(var(--blur));
+  background: var(--base);
+  border-radius: var(--radius);
+}
+
+
+
+img#photo2 {
+  --spacing: 0px;
+  --blur: 0px;
+
+  padding: var(--spacing);
+  filter: blur(var(--blur));
+}
+
+
+/*normal styles, nothing to do with css variables*/
+body {
+  text-align: center;
+  background: #193549;
+  color: white;
+  font-family: 'helvetica neue', sans-serif;
+  font-size: 30px;
+}
+
+
+.controls {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+input {
+
+  width: 100px;
+}
+
+
